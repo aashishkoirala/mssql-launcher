@@ -1,0 +1,30 @@
+- name: Test 1
+  server: testserver1
+  database: TestDB1
+  integrated: true
+- name: Test 2
+  server: testserver2,1434
+  database: TestDB2
+  username: testuser
+  password: testpassword
+- name: Test 2
+  server: testserver2,1434
+  database: TestDB2
+  username: testuser
+  password: testpassword
+- name: Test 3
+  database: TestDB2
+  username: testuser
+  password: testpassword
+- server: Server
+  database: TestDB2
+  username: testuser
+  password: testpassword
+- name: Test 4
+  server: Server
+  username: testuser
+  password: testpassword
+- name: Test 5
+  server: Server
+  database: Db2
+  username: testuser

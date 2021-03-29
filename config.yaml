@@ -1,0 +1,9 @@
+- name: Test 1
+  server: testserver1
+  database: TestDB1
+  integrated: true
+- name: Test 2
+  server: testserver2,1434
+  database: TestDB2
+  username: testuser
+  password: testpassword
