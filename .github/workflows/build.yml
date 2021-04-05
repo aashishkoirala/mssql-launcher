@@ -28,3 +28,16 @@ jobs:
       with:
         files: bin/
         dest: mssql-launcher.zip
+
+    - name: Push Distribution
+      run: |
+        mkdir -p dist
+        mv mssql-launcher.zip dist/mssql-launcher.zip
+        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git pull github ${GITHUB_REF} --ff-only
+        git add -A dist
+        git commit -m "Updated distribution."
+        git push github ${GITHUB_REF}
+
+git commit -m "Update native model"
+git push github HEAD:${GITHUB_REF}
