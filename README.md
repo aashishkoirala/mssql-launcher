@@ -2,7 +2,10 @@
 ___
 ##### By [Aashish Koirala](https://www.aashishkoirala.com)
 
+
 **MSSQL Launcher** is a cross-platform CLI based interactive tool that lets you define SQL Server connections in a file and pick them from a menu to connect using either the MSSQL-CLI tool or the SQLCMD tool. Tested on Linux (Ubuntu) and Windows. Written in Go. For those who like to live in the CLI and find it a hassle to launch SSMS any time you need to run a quick query or check some data quickly.
+
+[![Build Status](actions/workflows/build.yml/badge.svg)](actions/workflows/build.yml)
 
 ## Usage
 **mssql-launcher** [**--config** _config-file_] [**--log** _log-file_]
@@ -15,7 +18,16 @@ ___
 - Note that SQL Server _Integrated Windows Authentication_ mode, as the name suggests, only works on Windows.
 
 ## Installation
-- The binary is not hosted anywhere, so you will need to clone the source and build it.
+### Option 1
+- Download [this Zip file](dist/mssql-launcher.zip).
+- Extract it to get a folder for each supported platform, within which you will find the executable and a sample config file.
+### Option 2
+- If you have the Go SDK installed, run `go get github.com/aashishkoirala/mssql-launcher`.
+- Note that this will only bring in the binary and you will need to supply your own config file when running.
+### Option 3
+- Clone the source code and build as outlined next.
+
+## Build From Source
 - The build script is set up to run on Linux (Ubuntu), but generates a build for Windows as well.
 - To run the build script on Linux:
   - Simply run **make** in the repository directory.
