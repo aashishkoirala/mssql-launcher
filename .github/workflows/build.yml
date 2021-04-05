@@ -36,5 +36,7 @@ jobs:
         git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         git pull github ${GITHUB_REF} --ff-only
         git add -A dist
+        git config --global user.name "Aashish Koirala (Pipeline)"
+        git config --global user.email "aashishkoirala@gmail.com"
         git commit -m "Updated distribution."
         git push github ${GITHUB_REF}
