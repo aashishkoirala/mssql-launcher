@@ -38,6 +38,3 @@ jobs:
         git add -A dist
         git commit -m "Updated distribution."
         git push github ${GITHUB_REF}
-
-git commit -m "Update native model"
-git push github HEAD:${GITHUB_REF}
