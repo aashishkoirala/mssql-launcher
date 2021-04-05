@@ -22,3 +22,9 @@ jobs:
 
     - name: Build/Test/Doc
       run: make
+
+    - name: Zip Up Build
+      uses: papeloto/action-zip@v1
+      with:
+        files: bin/
+        dest: mssql-launcher.zip
